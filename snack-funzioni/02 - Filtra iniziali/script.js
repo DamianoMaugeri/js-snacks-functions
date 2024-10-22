@@ -7,16 +7,17 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 const startwith = (array , a) => {
     const result = []
     for (let i=0; i<array.length; i++){
-        let word = array[i]
-        if (word[0]===a) {
-            result.push(word)
+    
+        if (array[i][0]===a) {
+            result.push(array[i])
         }
         
     }
     return result
 }
 
-
+const cominciaCon = (array , a) => array.filter((element) => (element[0] === a))
+console.log(cominciaCon(names, 'L'))
 
 // Invoca la funzione qui e stampa il risultato in console
 console.log(startwith(names, 'A'))
